@@ -22,10 +22,6 @@ const Dashboard = () => {
 
   const pages = {
     repositories: <Repositories />,
-    reviews: <div>AI Code Review</div>,
-    security: <div>Cloud Security</div>,
-    "how-to-use": <div>How to Use</div>,
-    settings: <div>Settings</div>,
   };
 
   return (

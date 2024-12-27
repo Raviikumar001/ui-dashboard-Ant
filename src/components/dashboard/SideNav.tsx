@@ -14,7 +14,7 @@ import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router";
 
 const SideNav = () => {
-  const [hash, setHash] = useState("");
+  const [hash, setHash] = useState("repositories"); // Set default value to "repositories"
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const navItems = [
@@ -32,7 +32,13 @@ const SideNav = () => {
   useEffect(() => {
     const getHashFromURL = () => {
       const currentHash = window.location.hash;
-      setHash(currentHash.replace("#", ""));
+      // If there's no hash in the URL, set it to "repositories"
+      if (!currentHash) {
+        window.location.hash = "repositories";
+        setHash("repositories");
+      } else {
+        setHash(currentHash.replace("#", ""));
+      }
     };
 
     getHashFromURL();
@@ -92,7 +98,7 @@ const SideNav = () => {
           </button>
         </div>
 
-        {/* Main Navigation */}
+        {/*  Navigation */}
         <nav className="flex-1 md:min-h-32 min-h-fit overflow-y-auto custom-scrollbar">
           <div className="space-y-1">
             {navItems.map((item) => (
