@@ -25,7 +25,7 @@ npm run dev
 ```
 
 ## Project Structure
-
+```
 src/
 ├── assets/                    # Static assets like images, fonts
 ├── components/
@@ -67,6 +67,8 @@ config/
 public/
 ├── images/                # Public images
 └── svg/                   # Public SVGs
+
+```
 
   ## Technologies Used
  ```
