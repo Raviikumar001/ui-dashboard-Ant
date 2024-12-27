@@ -1,6 +1,4 @@
-# React Sidebar Navigation
-
-A modern sidebar navigation component built with React, Vite, and shadcn/ui.
+Built with React, Vite, and shadcn/ui.
 
 ## Prerequisites
 
